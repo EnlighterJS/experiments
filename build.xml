@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Enlighter" default="devcopy" basedir=".">
+
+    <!-- ANT-contrib !-->
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+
+
+    <!-- Plugin Test - DEVELOPMENT ONLY -->
+    <target name="devcopy">
+        <!-- Credentials, Host Settings !-->
+        <loadproperties srcFile=".credentials/sapphire.conf" prefix="dev"/>
+
+        <!-- transfer deploy plugin !-->
+        <echo message="Uploading files [Single Site]"/>
+        <scp todir="${dev.user}@${dev.host}:${dev.path}" trust="true" port="${dev.port}"
+             keyfile="${user.home}/${dev.keyfile}">
+            <fileset dir="wp-enlighterjs3-compat"/>
+        </scp>
+
+    </target>
+
+
+</project>
