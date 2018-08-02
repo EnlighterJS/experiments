@@ -88,7 +88,8 @@ add_action('wp_enqueue_scripts', function(){
 add_action('wp_footer', function(){
 
     $config = array(
-        'theme' => 'dracula'
+        'theme' => get_option('enlighter-defaultTheme', 'dracula'),
+        'language' => get_option('enlighter-defaultLanguage', 'generic')
     );
 
     echo '<script type="text/javascript">';

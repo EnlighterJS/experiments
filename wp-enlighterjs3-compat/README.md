@@ -12,7 +12,7 @@ Test EnlighterJS v3 with the current Enlighter WordPress Plugin v3
 ### Limitations ###
 
 * Theme Customizer won't work
-* `WordPress Backend -> Enlighter -> Appearance` won't work
+* `WordPress Backend -> Enlighter -> Appearance` won't work with the following exceptions: **Theme, Default Language**
 * `WordPress Backend -> Enlighter -> Extensions` won't work
 
 ## Preparation ##
