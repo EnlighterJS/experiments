@@ -26,7 +26,8 @@ add_filter('enlighter_themes', function(){
         'Atomic' => 'atomic',
         'Rowhammer' => 'rowhammer',
         'Bootstrap4' => 'boootstrap4',
-        'Dracula'=> 'dracula'
+        'Dracula'=> 'dracula',
+        'Monokai' => 'monokai'
     );
 });
 
