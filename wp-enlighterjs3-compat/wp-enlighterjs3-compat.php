@@ -3,7 +3,7 @@
     Plugin Name: EnlighterJS3 Compatibility
     Plugin URI: https://enlighterjs.org
     Description: Enlighter is a free, easy-to-use, syntax highlighting tool with a build-in theme editor
-    Version: 0.1-ALPHA1
+    Version: 0.1-DEV_d525845
     Author: Andi Dittrich
     Author URI: https://andidittrich.de
     License: GPL-2.0
@@ -11,6 +11,7 @@
 
 define('ENLIGHTERJS3_COMPAT_PLUGIN_PATH', dirname(__FILE__));
 define('ENLIGHTERJS3_COMPAT_PLUGIN_URL', plugins_url('/wp-enlighterjs3-compat/'));
+define('ENLIGHTERJS3_COMPAT_VERSION', 'd525845');
 
 // override Enlighter Theme List
 add_filter('enlighter_themes', function(){
@@ -81,8 +82,8 @@ add_filter('enlighter_languages', function(){
 
 // enqueue scripts + styles
 add_action('wp_enqueue_scripts', function(){
-    wp_enqueue_style('enlighterjs3', ENLIGHTERJS3_COMPAT_PLUGIN_URL.'assets/enlighterjs.min.css', array(), '3.0.0-RC1');
-    wp_enqueue_script('enlighterjs3', ENLIGHTERJS3_COMPAT_PLUGIN_URL.'assets/enlighterjs.min.js', array(), '3.0.0-RC1', true);
+    wp_enqueue_style('enlighterjs3', ENLIGHTERJS3_COMPAT_PLUGIN_URL.'assets/enlighterjs.min.css', array(), ENLIGHTERJS3_COMPAT_VERSION);
+    wp_enqueue_script('enlighterjs3', ENLIGHTERJS3_COMPAT_PLUGIN_URL.'assets/enlighterjs.min.js', array(), ENLIGHTERJS3_COMPAT_VERSION, true);
 });
 
 // add init code
